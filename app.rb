@@ -9,7 +9,7 @@ Cuba.define do
       #env['warden'].authenticate!(:token)
       #res.headers['Cache-Control'] = 'max-age=525600, public'
       #res.headers['Content-Type'] = 'application/json; charset=utf-8'
-      res.headers['Access-Control-Allow-Origin'] = '*'
+      res.headers['Access-Control-Allow-Origin'] = 'http://localhost:3000'
       res.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
       res.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization, Accept, X-User-Email, X-Auth-Token'
       #res.headers['Access-Control-Expose-Headers'] = 'any'
