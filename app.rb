@@ -10,9 +10,9 @@ Cuba.define do
       res.headers['Cache-Control'] = 'max-age=525600, public'
       res.headers['Content-Type'] = 'application/json; charset=utf-8'
       res.headers['Access-Control-Allow-Origin'] = '*'
-      res.header['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
-      res.header['Access-Control-Allow-Headers'] = 'Content-Type, Authorization, Accept, X-User-Email, X-Auth-Token'
-      res.header['Access-Control-Expose-Headers'] = 'any'
+      res.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
+      res.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization, Accept, X-User-Email, X-Auth-Token'
+      res.headers['Access-Control-Expose-Headers'] = 'any'
  
       res.write Oj.dump(PostalCode.where(codigo_postal:)
         .as_json(except: :id), mode: :object)
@@ -34,9 +34,9 @@ Cuba.define do
       res.headers['Cache-Control'] = 'max-age=525600, public'
       res.headers['Content-Type'] = 'application/json; charset=utf-8'
       res.headers['Access-Control-Allow-Origin'] = '*'
-      res.header['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
-      res.header['Access-Control-Allow-Headers'] = 'Content-Type, Authorization, Accept, X-User-Email, X-Auth-Token'
-      res.header['Access-Control-Expose-Headers'] = 'any'
+      res.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
+      res.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization, Accept, X-User-Email, X-Auth-Token'
+      res.headers['Access-Control-Expose-Headers'] = 'any'
       res.write PostalCodes.fetch_locations(codigo_postal)
     end
 
