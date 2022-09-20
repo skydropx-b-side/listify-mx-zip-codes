@@ -18,7 +18,7 @@ if ENV['VALIDATE_HEADER']
     manager.default_strategies :token
     manager.failure_app = lambda { |_e|
       [401, { 'Content-Type' => 'application/json' },
-       [{ error: 'Not Authorized to use API. Check https://rapidapi.com/acrogenesis/api/mexico-zip-codes' }.to_json]]
+       [{ error: 'Not Authorized to use API.' }.to_json]]
     }
   end
 end
